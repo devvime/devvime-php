@@ -1,13 +1,13 @@
-# ModPath PHP
+# Devvime PHP
 
-### A Minimal and Expressive PHP Micro Routing Framework
+### A Minimal and Expressive PHP Micro Framework
 
 ---
 
 ## 📦 Installation
 
 ```bash
-composer require devvime/modpath
+composer install
 ```
 
 ---
@@ -15,11 +15,10 @@ composer require devvime/modpath
 ## ⚙️ Initial Configuration
 
 ```php
-require dirname(__DIR__) . '/vendor/autoload.php';
 
 use ModPath\Router\Router;
-use ModPath\Controllers\UserController;
-use ModPath\Controllers\ProductController;
+use Devvime\application\controller\UserController;
+use Devvime\application\controller\ProductController;
 
 $router = new Router();
 
@@ -36,7 +35,7 @@ $router->dispatch();
 ## 🧽 Defining a Controller with Routes and Middleware
 
 ```php
-namespace ModPath\Controllers;
+namespace Devvime\application\controller;
 
 use ModPath\View\View;
 use ModPath\Attribute\Route;
