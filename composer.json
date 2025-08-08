@@ -1,0 +1,31 @@
+{
+  "name": "devvime/devvime-php",
+  "description": "A Minimal and Expressive PHP Micro Routing Framework",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Devvime\\": "src/",
+      "Tests\\": "tests/"
+    }
+  },
+  "authors": [
+    {
+      "name": "devvime"
+    }
+  ],
+  "scripts": {
+    "test": "./vendor/bin/pest"
+  },
+  "require-dev": {
+    "pestphp/pest": "^3.8"
+  },
+  "config": {
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
+  },
+  "require": {
+    "devvime/modpath": "^1.0",
+    "vlucas/phpdotenv": "^5.6"
+  }
+}
