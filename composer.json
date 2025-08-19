@@ -14,7 +14,13 @@
     }
   ],
   "scripts": {
-    "test": "./vendor/bin/pest"
+    "test": "./vendor/bin/pest",
+    "create:migration": "vendor/bin/phinx create",
+    "create:seed": "vendor/bin/phinx seed:create",
+    "migrate": "vendor/bin/phinx migrate",
+    "migrate:seed": "vendor/bin/phinx seed:run",
+    "rollback": "vendor/bin/phinx rollback",
+    "rollback:step": "vendor/bin/phinx rollback -t 0"
   },
   "require-dev": {
     "pestphp/pest": "^3.8"
@@ -25,7 +31,12 @@
     }
   },
   "require": {
+    "PHP": "^8.2.0",
     "devvime/modpath": "^1.0",
-    "vlucas/phpdotenv": "^5.6"
+    "vlucas/phpdotenv": "^5.6",
+    "phpmailer/phpmailer": "^6.10",
+    "firebase/php-jwt": "^6.11",
+    "robmorgan/phinx": "^0.16.10",
+    "catfan/medoo": "^2.2"
   }
 }

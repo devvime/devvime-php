@@ -4,10 +4,9 @@ namespace Devvime\application\controller;
 
 use ModPath\Attribute\Route;
 use ModPath\Attribute\Controller;
-use ModPath\Interface\ControllerInterface;
 
 #[Controller(path: '/user')]
-class UserController implements ControllerInterface
+class UserController
 {
     public function __construct() {}
 
