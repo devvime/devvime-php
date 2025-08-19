@@ -17,6 +17,7 @@ class SystemController
     #[Route(path: '', method: 'DELETE')]
     public function auth($request, $response)
     {
+        $response->status(404);
         $response->send('ERROR 404: Route not found.');
     }
 }

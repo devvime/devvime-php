@@ -13,11 +13,11 @@ return
             'default_environment' => 'development',
             'development' => [
                 'adapter' => DATABASE_TYPE,
-                'host' => '127.0.0.1',
+                'host' => DATABASE_SERVER,
                 'name' => DATABASE_NAME,
                 'user' => DATABASE_USER,
                 'pass' => DATABASE_PASSWORD,
-                'port' => '3307',
+                'port' => DATABASE_PASSWORD,
                 'charset' => 'utf8',
             ],
             'testing' => [
