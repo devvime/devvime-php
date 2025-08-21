@@ -16,6 +16,14 @@ class UserService
     public function registerUser($request, $response)
     {
         try {
+            $verifyUser = $this->user->find('id', ['email' => $request->body->email]);
+            if ($verifyUser !== null) {
+                return [
+                    "status" => 409,
+                    "error" => true,
+                    "message" => "User already registered."
+                ];
+            }
             $password = password_hash($request->body->password, PASSWORD_DEFAULT);
             $user = [
                 "name" => $request->body->name,
@@ -64,7 +72,7 @@ class UserService
     public function updateUser($request, $response)
     {
         try {
-            $this->user->update($request->params['id'], $request->body);
+            $this->user->update($request->params['id'], (array) $request->body);
             return [
                 "status" => 200,
                 "message" => "User updated successfully!"

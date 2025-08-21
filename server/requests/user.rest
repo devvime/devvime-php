@@ -1,0 +1,34 @@
+### List all users
+GET {{baseURL}}/user
+Content-Type: application/json 
+Authorization: Bearer {{token}}
+
+### List user by ID
+GET {{baseURL}}/user/18
+Content-Type: application/json 
+Authorization: Bearer {{token}}
+
+### Register new user
+POST {{baseURL}}/user
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+    "name": "Kakashi",
+    "email": "ninja@sacana.com",
+    "password": "alguémnéh"
+}
+
+### Update user
+PUT {{baseURL}}/user/18
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+    "email": "ninja@sempai.com"
+}
+
+### Delete user
+DELETE {{baseURL}}/user/16
+Content-Type: application/json 
+Authorization: Bearer {{token}}

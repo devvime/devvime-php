@@ -1,0 +1,8 @@
+### Login
+POST {{baseURL}}/auth/session
+Content-Type: application/json
+
+{
+  "email": "test55@admin.com",
+  "password": "test"
+}

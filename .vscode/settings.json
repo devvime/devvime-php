@@ -1,8 +1,14 @@
 {
-    "editor.formatOnSave": true,
-    "editor.insertSpaces": true,
-    "editor.tabSize": 2,
-    "[php]": {
-        "editor.tabSize": 4
+  "editor.formatOnSave": true,
+  "editor.insertSpaces": true,
+  "editor.tabSize": 2,
+  "[php]": {
+    "editor.tabSize": 4
+  },
+  "rest-client.environmentVariables": {
+    "$shared": {
+      "baseURL": "http://localhost:8080",
+      "token": ""
     }
+  }
 }

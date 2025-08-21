@@ -6,8 +6,9 @@ use ModPath\Attribute\Route;
 use ModPath\Attribute\Controller;
 
 use Devvime\application\service\UserService;
+use Devvime\http\middleware\AuthMiddleware;
 
-#[Controller(path: '/user')]
+#[Controller(path: '/user', middleware: AuthMiddleware::class)]
 class UserController
 {
     public function __construct(
