@@ -18,6 +18,9 @@ class SystemController
     public function auth($request, $response)
     {
         $response->status(404);
-        $response->send('ERROR 404: Route not found.');
+        $response->json([
+            "error" => 404,
+            "message" => "Route not found."
+        ]);
     }
 }
