@@ -2,7 +2,7 @@
 
 namespace Devvime\application\repository;
 
-use Devvime\shared\Repository;
+use ModPath\Helpers\Repository;
 
 class User extends Repository
 {

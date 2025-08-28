@@ -3,7 +3,7 @@
 namespace Devvime\application\useCase\user;
 
 use DomainException;
-use Devvime\shared\Token;
+use ModPath\Helpers\Token;
 use Devvime\application\repository\User;
 
 class ActiveAccount

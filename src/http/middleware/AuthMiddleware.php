@@ -3,8 +3,7 @@
 namespace Devvime\http\middleware;
 
 use ModPath\Interface\MiddlewareInterface;
-use Devvime\shared\Token;
-use Exception;
+use ModPath\Helpers\Token;
 
 class AuthMiddleware implements MiddlewareInterface
 {

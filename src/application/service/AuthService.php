@@ -3,7 +3,7 @@
 namespace Devvime\application\service;
 
 use DomainException;
-use Devvime\shared\Token;
+use ModPath\Helpers\Token;
 use Devvime\application\repository\User;
 use Devvime\application\useCase\user\SendActivationEmail;
 

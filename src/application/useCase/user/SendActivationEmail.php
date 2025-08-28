@@ -4,14 +4,14 @@ namespace Devvime\application\useCase\user;
 
 use Error;
 use DomainException;
-use Devvime\shared\Mailer;
-use Devvime\shared\Token;
+use ModPath\Helpers\Mailler;
+use ModPath\Helpers\Token;
 use ModPath\View\View;
 
 class SendActivationEmail
 {
     public function __construct(
-        private Mailer $mailer = new Mailer()
+        private Mailler $mailler = new Mailler()
     ) {}
 
     public function execute(array $user)
@@ -23,7 +23,7 @@ class SendActivationEmail
             ]);
             $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') ? "https" : "http";
             $host = $_SERVER['HTTP_HOST'];
-            $this->mailer->send([
+            $this->mailler->send([
                 "title" => "Welcome {$user['name']}!",
                 "subject" => "Active your account",
                 "altbody" => "Welcome to app {$user['name']}!",

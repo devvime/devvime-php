@@ -199,3 +199,22 @@ Equivalent to:
 | For         | `<for($x = 0; $x <= 10; $x++)> ... </for>` | `<?php for ($x = 0; $x <= 10; $x++): ?> ... <?php endfor; ?>`  |
 
 ---
+
+## 🐳 Running with Docker
+
+### 1. Build and start the containers
+
+```bash
+docker-compose up --build
+```
+
+Your application will be available at:
+
+```
+http://localhost:8080
+```
+
+* PHP runs inside the `php` container.
+* Redis runs on port `6380`.
+
+---
