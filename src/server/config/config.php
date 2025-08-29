@@ -8,7 +8,7 @@ header("Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-W
 header("Content-Type: application/json; charset=UTF-8");
 
 /* Pré-flight */
-if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
+if (isset($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
     http_response_code(200);
     exit;
 }
@@ -38,8 +38,6 @@ session_start();
 session_regenerate_id(true);
 
 /* Rate limit */
-if (!RateLimit::execute(host: 'redis', port: 6380)) {
-    http_response_code(429);
-    echo json_encode(["error" => "Rate limit exceeded"]);
+if (!RateLimit::execute(host: $_ENV['REDIS_HOST'], port: $_ENV['REDIS_PORT'])) {
     exit;
 }
